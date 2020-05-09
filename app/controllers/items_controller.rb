@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    Item.create(name:item_params[:name],price:item_params[:rank],user_id:current_user.id)
+    Item.create(name:item_params[:name],rank:item_params[:rank],user_id:current_user.id)
   end
 
   def move_to_index

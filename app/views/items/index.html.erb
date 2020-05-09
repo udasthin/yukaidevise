@@ -1,7 +1,7 @@
 <h1>愉快データ一覧</h1>
 <% if user_signed_in? %>
   <% @items.each do |item| %>
-    <p><%= item.name %>:<%= item.rank %></p>
+    <p><%= item.name %>:<%= item.rank %>：会員No.<%= item.user_id %></p>
   <% end %>
 <% else %>
   <p>ログインしてください</p>
