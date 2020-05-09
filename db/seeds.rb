@@ -1,3 +1,3 @@
-Item.create!(name:"uda",price:0,user_id:1)
-Item.create!(name:"saku",price:0,user_id:2)
-Item.create!(name:"eisu",price:0,user_id:3)
+Item.create!(name:"uda",rank:"C",user_id:1)
+Item.create!(name:"saku",rank:"E",user_id:2)
+Item.create!(name:"eisu",rank:"A",user_id:3)

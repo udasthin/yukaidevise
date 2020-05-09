@@ -1,1 +1,8 @@
-<h1>商品一覧</h1>
+<h1>愉快データ一覧</h1>
+<% if user_signed_in? %>
+  <% @items.each do |item| %>
+    <p><%= item.name %>:<%= item.rank %></p>
+  <% end %>
+<% else %>
+  <p>ログインしてください</p>
+<% end %>
