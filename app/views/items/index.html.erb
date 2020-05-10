@@ -1,7 +1,9 @@
+<h1>index.html.erbの画面</h1>
 <h1>愉快データ一覧</h1>
 <% if user_signed_in? %>
   <% @items.each do |item| %>
-    <p><%= item.name %>:<%= item.rank %>：会員No.<%= item.user_id %></p>
+    <p><%= item.name %>:<%= item.rank %>：愉快No.<%= item.user_id %>
+    <%= link_to "削除", item_path(item),method: :delete,data:{confirm: "削除する？"} %></p>
   <% end %>
 <% else %>
   <p>ログインしてください</p>

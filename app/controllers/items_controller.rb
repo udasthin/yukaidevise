@@ -14,6 +14,10 @@ class ItemsController < ApplicationController
     Item.create(name:item_params[:name],rank:item_params[:rank],user_id:current_user.id)
   end
 
+  def destroy
+    item = Item.find(params[:id])
+  end
+
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
@@ -23,5 +27,6 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name,:rank)
   end
+
 
 end
