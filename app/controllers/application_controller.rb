@@ -5,4 +5,11 @@ class ApplicationController < ActionController::Base
     drvise_parameters_sanitizer.permit(:sign_up, keys: [:nickname])
   end
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  # ここから
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
+  end
+
 end
