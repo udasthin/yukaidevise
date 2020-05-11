@@ -5,8 +5,4 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
   end
 
-  def destroy
-    item = Item.find(params[:id])
-  end
-
 end

@@ -1,6 +1,10 @@
+<h1>new.html.erbの画面</h1>
 <h1>新規投稿</h1>
 <%= form_with model: @item, local:true,method: :post do |f| %>
   <p>名前：<%= f.text_field :name %></p>
   <p>ランク：<%= f.text_field :rank %></p>
+  <p>勝ち数：<%= f.text_field :win %></p>
+  <p>負け数：<%= f.text_field :lose %></p>
+  <p>ゴール：<%= f.text_field :goal %></p>
   <input type="submit" value="送信">
 <% end %>

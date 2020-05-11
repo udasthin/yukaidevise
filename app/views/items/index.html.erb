@@ -2,7 +2,7 @@
 <h1>愉快データ一覧</h1>
 <% if user_signed_in? %>
   <% @items.each do |item| %>
-    <p><%= item.name %>:<%= item.rank %>：愉快No.<%= item.user_id %>
+    <p>名前：<%= item.name %>、ランク：<%= item.rank %>、愉快No.<%= item.user_id %>、勝ち数：<%= item.win %>、負け数：<%= item.lose %>、ゴール数：<%= item.goal %>
     <%= link_to "削除", item_path(item),method: :delete,data:{confirm: "削除する？"} %></p>
   <% end %>
 <% else %>

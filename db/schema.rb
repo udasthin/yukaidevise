@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 2020_05_10_071148) do
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "rank"
+    t.integer "win"
+    t.integer "lose"
+    t.integer "goal"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -11,11 +11,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    Item.create(name:item_params[:name],rank:item_params[:rank],user_id:current_user.id)
+    Item.create(name:item_params[:name], rank:item_params[:rank], win:item_params[:win],lose:item_params[:lose],goal:item_params[:goal], user_id:current_user.id)
   end
 
   def destroy
     item = Item.find(params[:id])
+    item.destroy
   end
 
   def move_to_index
@@ -25,7 +26,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:rank)
+    params.require(:item).permit(:name,:rank,:win,:lose,:goal)
   end
 
 
